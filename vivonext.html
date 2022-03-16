@@ -36,7 +36,27 @@ color: @004d00;
 <script>
 <!-- ______________________________________________________Variáveis_____________________________________________________________ -->
 function pega(){
-var1 =  document.formulario.tipo.value + "\n"+"\n";	
+var1 =  "AMDOCS - Favor informar os campos abaixo para que possamos iniciar a análise." + "\n"
+ 
++ "|ORDER_ID (pedido)" + "\n"
++"|SALES_CHANNEL"  + "\n"
++"|RESERVATION_ID"  + "\n"
++"|DIST_CENTER"  + "\n"
++"|SALES_OFFICE"  + "\n"
++"|CANAL_DSITRIBUICAO" +  "\n"
++"|CRE_DATETIME"  + "\n"
++"|SERVICE_ID" +  "\n"
++"|VALUE"  + "\n"
++"|NOME " + "\n"
++"|CPF  "+ "\n"
++"|ENDERECO_CLIENTE"  + "\n"
++"|ENDERECO_ENTREGA"  + "\n"
++"|IMEI"  + "\n"
++"|DEV_SKU"  + "\n"
++"|ICCID"  + "\n"
++"|SIM_SKU"  + "\n"
++"|VALOR"  + "\n"
++"Caso seja uma Ordem tipo Buyback/Renova, por favor nos passar os dados de voucher, marca, modelo, valor desconto." + "\n"+"\n"+"\n";	
 var2 = "" + document.formulario.temaassunto.value + "\n";
 var3 = "" + document.formulario.rejeicao1.value + "\n";
 
@@ -91,7 +111,7 @@ btnCopy.addEventListener('click', (e) => {
 	
 	<div id = "menu">
 		<UL>
-		<li><a href = "https://rhianmello.github.io/layout.minsait.indra/"> Inicio </a></li>
+			<li><a href = "https://rhianmello.github.io/layout.minsait.indra/"> Inicio </a></li>
 			<li><a href = "sitef.html"> SITEF </a></li>
 			<li><a href = "vivonext.html"> VIVO NEXT </a></li>
 			<li><a href = "vivocorp.html"> VIVO CORP </a></li>
@@ -109,13 +129,38 @@ btnCopy.addEventListener('click', (e) => {
 <form name="formulario">
 		<div class="form-row">
 			<div class="form-group col-md-6">
-			<label>SITEF</label>
+			<label>Qualquer chamado VIVONEXT Loja Física (RFC Reserva e RFC Pedido – ordem)</label>
+		</div>
+	 <div class="form-row">
+			<div class="form-group col-md-6">
+			<label>Texto padrão a ser envido na Nota do Chamado caso venha sem nenhuma informação:</label>
 			<select id="tipo" class="form-control">
-				<option selected>Prezados, 
-favor verificar problema de SITEF</option>
+				<option selected>AMDOCS - Favor informar os campos abaixo para que possamos iniciar a análise.<br>
+ 
+|ORDER_ID (pedido)
+|SALES_CHANNEL
+|RESERVATION_ID
+|DIST_CENTER
+|SALES_OFFICE
+|CANAL_DSITRIBUICAO
+|CRE_DATETIME
+|SERVICE_ID
+|VALUE
+|NOME
+|CPF
+|ENDERECO_CLIENTE
+|ENDERECO_ENTREGA
+|IMEI
+|DEV_SKU
+|ICCID
+|SIM_SKU
+|VALOR
+
+Caso seja uma Ordem do tipo Buyback/Renova, por favor nos passar os dados de voucher, marca, modelo, valor do desconto.
+</option>
 				</select>
 		</div>
-
+	 </div>
 		<div class="form-group col-md-6">
 			<label>Consultor</label>
 			<select id="temaassunto" class="form-control">
@@ -146,8 +191,19 @@ favor verificar problema de SITEF</option>
 </body>
 <div class="form-group col-md-4">
 	<label>Fila</label><br>
-	<img src="https://user-images.githubusercontent.com/79878127/158693953-f5b66936-0e20-41c2-96d8-e9eac675445c.png" alt="image" height="250"  width="1300">
-	
-	 </select>
+	<img src="img/vivonext.png" alt="image" height="300"  width="1300">
+	 </div>
+	 
+<div class="form-group col-md-4">
+	<label>Ferramentas de análise:</label><br>
+	<label>Tabela ZSDT_LOG_RFC</label><br>
+	<label>Pedido exemplo: 3925318800</label>
+	<img src="img/vivonexttabela.png" alt="image" height="400"  width="600">
+	<label>Pedido exemplo: 3925318800</label>
+	<img src="img/vivonexttabela2.png" alt="image" height="250"  width="1200">
+	 </div>
+	 <div class="form-group col-md-4">
+	<label>Caso não consigamos analisar por falta/inconsistência de dados:</label><br>
+	<label>Informar via e-mail análise a Sustentação e colocar o chamado na fila dela, informando que precisamos do request/response (XML).</label><br>
 	 </div>
 </html>
