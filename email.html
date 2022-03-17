@@ -1,0 +1,785 @@
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Email SD</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<style>
+body {background-color: black; color: #f8f9fa; margin: 10px, right: 10px;
+	}
+
+#menu ul{
+margin: 0;
+list-style: none;
+}
+#menu ul li{
+display: inline;
+}
+#menu ul li a {
+padding: 2px 10px;
+display: inline-block;
+text-decoration: none;
+
+}
+#menu ul li a:hover {
+color: @004d00;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 269;
+}
+.form-control {    
+    background-color: #dee2e6;
+    background-clip: padding-box;
+    border: 2px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+</style>
+<script>
+ <!-- –__________________________________________________________Variáveis__________________________________________________________ -->
+function pega(){
+
+var1 = document.formulario.saudacao.value + " " + document.formulario.nome.value +"!"+"\n"+"\n";
+var2 = "Recebemos o seu chamado " + document.formulario.incidente.value + " onde menciona:'" + document.formulario.mensagem.value + "'"+"\n"+"\n" ;
+var3 = "➢Ao analisarmos o Docnum " + document.formulario.docnum.value + ", UF de origem " + document.formulario.uf.value + ", " + 
+document.formulario.rejeicao.value + " " + document.formulario.etapa.value + "\n";
+
+
+
+<!-- __________________________________________________________Fechamento_das_Variáveis__________________________________________________________ -->
+document.write('<br>');
+
+
+document.write('<textarea class=form-control rows=10 cols=150 style="border:transparent;">');
+
+document.write(var1);
+document.write(var2);
+document.write(var3);
+
+document.write('</textarea>');
+
+document.write('<br>');
+document.write('<br>');
+document.write('<button type="button" class="copy" style="background-color:black; color: #fff; borber: 2px solid #4CAF50; padding: 8px 18px;">Copiar Texto</button>');
+document.write('<br>');
+document.write('<br>');
+document.write('<a href="https://rhianmello.github.io/layout.minsait.indra/">Retornar</a>');
+
+
+const btnCopy = document.querySelector('button.copy');
+const textArea = document.querySelector('textarea');
+
+btnCopy.addEventListener('click', (e) => {
+  e.preventDefault();
+  
+  navigator.clipboard.writeText(textArea.value);
+  alert('Confirme para que o Texto seja copiado!');
+  
+});
+
+
+
+}
+
+</script>
+
+</head>
+
+<body>
+<header>
+	<div class="caixa">
+		<h1><img src="https://www.indracompany.com/sites/default/files/d7/Nueva_Marca/kit_de_prensa/Imagenes_multimedia/logotipo_minsait_version_secundaria.jpg" width="269">
+		</h1>
+	</div>
+	<HR size="5" color=#fff>
+	<div id = "menu">
+		<UL>
+			<li><a href = "https://rhianmello.github.io/layout.minsait.indra/"> Inicio </a></li>
+			<li><a href = "sitef.html"> SITEF </a></li>
+			<li><a href = "vivonext.html"> VIVO NEXT </a></li>
+			<li><a href = "vivocorp.html"> VIVO CORP </a></li>
+			<li><a href = "vivomoney.html"> VIVO MONEY </a></li>
+			<li><a href = "pinpad.html"> PINPAD </a></li>
+			<li><a href = "mm.html"> MM </a></li>
+			<li><a href = "fi.html"> FI </a></li>
+			<li><a href = "email.html"> E-mail para rejeições... </a></li>
+		</ul>
+	</div>
+	</header>
+<HR size="5" color=#fff>
+
+<div class="container-fluid">
+
+<form name="formulario">
+	<br>
+		
+	<div class="form-row">
+		<div class="form-group col-md-2">
+			<label>Saudações</label>
+				<select id="saudacao" class="form-control">
+				<option selected>Saudações...</option>
+				<option>Bom dia</option>
+				<option>Boa tarde</option>
+				<option>Boa noite</option>
+				
+			</select>
+		</div>
+		<div class="form-group col-md-2">
+			<label>Nome:</label>
+			<select id="nome" class="form-control">
+				<option selected>Nome...</option>
+				<option>Adriana</option>
+				<option>Amanda</option>
+				<option>Ana</option>
+				<option>Daniel</option>
+				<option>Diogenes</option>
+				<option>Elaine</option>
+				<option>Erick</option>
+				<option>Erika</option>
+				<option>Geziane</option>
+				<option>Graciela</option>
+				<option>Guilherme</option>
+				<option>Heloisa</option>
+				<option>Iago</option>
+				<option>Joasafa</option>
+				<option>Johnata</option>
+				<option>Kesia</option>
+				<option>Leandro</option>
+				<option>Leônidas</option>
+				<option>Letícia</option>
+				<option>Lorrayne</option>
+				<option>Lucas</option>
+				<option>Luiz</option>
+				<option>Madelaine</option>
+				<option>Maura</option>
+				<option>Rafael</option>
+				<option>Renata</option>
+				<option>Rita</option>
+				<option>Tâmara</option>
+				<option>Taynara</option>
+				<option>Yardley</option>	
+			</select>
+			</div>
+
+			<div class="form-group col-md-2">
+			<label>incidente:</label>
+			<input type="text" class="form-control" id="incidente" Value="xxxxxx">
+			</div>
+
+			<div class="form-group col-md-2">
+			<label>DocNum:</label>
+			<input type="text" class="form-control" id="docnum" Value="xxxxxx">
+			</div>
+		</div>
+	
+
+	<div class="form-row">
+	<div class="form-group col-md-8">
+		<label>Rejeição:</label>
+			<select id="rejeicao" class="form-control">
+			   <option selected></option>
+                              <option>apresentou a rejeição 100 (Autorizado o uso da NF-e)</option>
+                              <option>apresentou a rejeição 101 (Cancelamento de NF-e homologado)</option>
+                              <option>apresentou a rejeição 102 (Inutilização de número homologado)</option>
+                              <option>apresentou a rejeição 103 (Lote recebido com sucesso)</option>
+                              <option>apresentou a rejeição 104 (Lote processado)</option>
+                              <option>apresentou a rejeição 105 (Lote em processamento)</option>
+                              <option>apresentou a rejeição 106 (Lote não localizado)</option>
+                              <option>apresentou a rejeição 107 (Serviço em Operação)</option>
+                              <option>apresentou a rejeição 108 (Serviço Paralisado Momentaneamente (curto prazo))</option>
+                              <option>apresentou a rejeição 109 (Serviço Paralisado sem Previsão)</option>
+                              <option>apresentou a rejeição 110 (Uso Denegado)</option>
+                              <option>apresentou a rejeição 111 (Consulta cadastro com uma ocorrência)</option>
+                              <option>apresentou a rejeição 112 (Consulta cadastro com mais de uma ocorrência)</option>
+                              <option>apresentou a rejeição 124 (EPEC Autorizado)</option>
+                              <option>apresentou a rejeição 128 (Lote de Evento Processado)</option>
+                              <option>apresentou a rejeição 135 (Evento registrado e vinculado a NF-e)</option>
+                              <option>apresentou a rejeição 136 (Evento registrado, mas não vinculado a NF-e)</option>
+                              <option>apresentou a rejeição 137 (Nenhum documento localizado para o Destinatário)</option>
+                              <option>apresentou a rejeição 138 (Documento localizado para o Destinatário)</option>
+                              <option>apresentou a rejeição 139 (Pedido de Download processado)</option>
+                              <option>apresentou a rejeição 140 (Download disponibilizado)</option>
+                              <option>apresentou a rejeição 142 (Ambiente de Contingência EPEC bloqueado para o Emitente)</option>
+                              <option>apresentou a rejeição 150 (Autorizado o uso da NF-e, autorização fora de prazo)</option>
+                              <option>apresentou a rejeição 151 (Cancelamento de NF-e homologado fora de prazo)</option>
+                              <option>apresentou a rejeição 201 (Rejeição: Número máximo de numeração a inutilizar ultrapassou o limite)</option>
+                              <option>apresentou a rejeição 202 (Rejeição: Falha no reconhecimento da autoria ou integridade do arquivo digital)</option>
+                              <option>apresentou a rejeição 203 (Rejeição: Emissor não habilitado para emissão de NF-e)</option>
+                              <option>apresentou a rejeição 204 (Duplicidade de NF-e [nRec:999999999999999])</option>
+                              <option>apresentou a rejeição 205 (NF-e está denegada na base de dados da SEFAZ [nRec:999999999999999])</option>
+                              <option>apresentou a rejeição 206 (Rejeição: NF-e já está inutilizada na Base de dados da SEFAZ)</option>
+                              <option>apresentou a rejeição 207 (Rejeição: CNPJ do emitente inválido)</option>
+                              <option>apresentou a rejeição 208 (Rejeição: CNPJ do destinatário inválido)</option>
+                              <option>apresentou a rejeição 209 (Rejeição: IE do emitente inválida)</option>
+                              <option>apresentou a rejeição 210 (Rejeição: IE do destinatário inválida)</option>
+                              <option>apresentou a rejeição 211 (Rejeição: IE do substituto inválida)</option>
+                              <option>apresentou a rejeição 212 (Rejeição: Data de emissão NF-e posterior a data de recebimento)</option>
+                              <option>apresentou a rejeição 213 (Rejeição: CNPJ-Base do Emitente difere do CNPJ-Base do Certificado Digital)</option>
+                              <option>apresentou a rejeição 214 (Rejeição: Tamanho da mensagem excedeu o limite estabelecido)</option>
+                              <option>apresentou a rejeição 215 (Rejeição: Falha no schema XML)</option>
+                              <option>apresentou a rejeição 216 (Rejeição: Chave de Acesso difere da cadastrada)</option>
+                              <option>apresentou a rejeição 217 (Rejeição: NF-e não consta na base de dados da SEFAZ)</option>
+                              <option>apresentou a rejeição 218 (NF-e já está cancelada na base de dados da SEFAZ [nRec:999999999999999])</option>
+                              <option>apresentou a rejeição 219 (Rejeição: Circulação da NF-e verificada)</option>
+                              <option>apresentou a rejeição 220 (Rejeição: Prazo de Cancelamento superior ao previsto na Legislação)</option>
+                              <option>apresentou a rejeição 221 (Rejeição: Confirmado o recebimento da NF-e pelo destinatário)</option>
+                              <option>apresentou a rejeição 222 (Rejeição: Protocolo de Autorização de Uso difere do cadastrado)</option>
+                              <option>apresentou a rejeição 223 (Rejeição: CNPJ do transmissor do lote difere do CNPJ do transmissor da consulta)</option>
+                              <option>apresentou a rejeição 224 (Rejeição: A faixa inicial é maior que a faixa final)</option>
+                              <option>apresentou a rejeição 225 (Rejeição: Falha no Schema XML do lote de NFe)</option>
+                              <option>apresentou a rejeição 226 (Rejeição: Código da UF do Emitente diverge da UF autorizadora)</option>
+                              <option>apresentou a rejeição 227 (Rejeição: Erro na Chave de Acesso – Campo Id – falta a literal NFe)</option>
+                              <option>apresentou a rejeição 228 (Rejeição: Data de Emissão muito atrasada)</option>
+                              <option>apresentou a rejeição 229 (Rejeição: IE do emitente não informada)</option>
+                              <option>apresentou a rejeição 230 (Rejeição: IE do emitente não cadastrada)</option>
+                              <option>apresentou a rejeição 231 (Rejeição: IE do emitente não vinculada ao CNPJ)</option>
+                              <option>apresentou a rejeição 232 (Rejeição: IE do destinatário não informada)</option>
+                              <option>apresentou a rejeição 233 (Rejeição: IE do destinatário não cadastrada)</option>
+                              <option>apresentou a rejeição 234 (Rejeição: IE do destinatário não vinculada ao CNPJ)</option>
+                              <option>apresentou a rejeição 235 (Rejeição: Inscrição SUFRAMA inválida)</option>
+                              <option>apresentou a rejeição 236 (Rejeição: Chave de Acesso com dígito verificador inválido)</option>
+                              <option>apresentou a rejeição 237 (Rejeição: CPF do destinatário inválido)</option>
+                              <option>apresentou a rejeição 238 (Rejeição: Cabeçalho – Versão do arquivo XML superior a Versão vigente)</option>
+                              <option>apresentou a rejeição 239 (Rejeição: Cabeçalho – Versão do arquivo XML não suportada)</option>
+                              <option>apresentou a rejeição 240 (Rejeição: Cancelamento/Inutilização – Irregularidade Fiscal do Emitente)</option>
+                              <option>apresentou a rejeição 241 (Rejeição: Um número da faixa já foi utilizado)</option>
+                              <option>apresentou a rejeição 242 (Rejeição: Cabeçalho – Falha no Schema XML)</option>
+                              <option>apresentou a rejeição 243 (Rejeição: XML Mal Formado)</option>
+                              <option>apresentou a rejeição 244 (Rejeição: CNPJ do Certificado Digital difere do CNPJ da Matriz e do CNPJ do Emitente)</option>
+                              <option>apresentou a rejeição 245 (Rejeição: CNPJ Emitente não cadastrado)</option>
+                              <option>apresentou a rejeição 246 (Rejeição: CNPJ Destinatário não cadastrado)</option>
+                              <option>apresentou a rejeição 247 (Rejeição: Sigla da UF do Emitente diverge da UF autorizadora)</option>
+                              <option>apresentou a rejeição 248 (Rejeição: UF do Recibo diverge da UF autorizadora)</option>
+                              <option>apresentou a rejeição 249 (Rejeição: UF da Chave de Acesso diverge da UF autorizadora)</option>
+                              <option>apresentou a rejeição 250 (Rejeição: UF diverge da UF autorizadora)</option>
+                              <option>apresentou a rejeição 251 (Rejeição: UF/Município destinatário não pertence a SUFRAMA)</option>
+                              <option>apresentou a rejeição 252 (Rejeição: Ambiente informado diverge do Ambiente de recebimento)</option>
+                              <option>apresentou a rejeição 253 (Rejeição: Digito Verificador da chave de acesso composta inválida)</option>
+                              <option>apresentou a rejeição 254 (Rejeição: NF-e complementar não possui NF referenciada)</option>
+                              <option>apresentou a rejeição 255 (Rejeição: NF-e complementar possui mais de uma NF referenciada)</option>
+                              <option>apresentou a rejeição 256 (Rejeição: Uma NF-e da faixa já está inutilizada na Base de dados da SEFAZ)</option>
+                              <option>apresentou a rejeição 257 (Rejeição: Solicitante não habilitado para emissão da NF-e)</option>
+                              <option>apresentou a rejeição 258 (Rejeição: CNPJ da consulta inválido)</option>
+                              <option>apresentou a rejeição 259 (Rejeição: CNPJ da consulta não cadastrado como contribuinte na UF)</option>
+                              <option>apresentou a rejeição 260 (Rejeição: IE da consulta inválida)</option>
+                              <option>apresentou a rejeição 261 (Rejeição: IE da consulta não cadastrada como contribuinte na UF)</option>
+                              <option>apresentou a rejeição 262 (Rejeição: UF não fornece consulta por CPF)</option>
+                              <option>apresentou a rejeição 263 (Rejeição: CPF da consulta inválido)</option>
+                              <option>apresentou a rejeição 264 (Rejeição: CPF da consulta não cadastrado como contribuinte na UF)</option>
+                              <option>apresentou a rejeição 265 (Rejeição: Sigla da UF da consulta difere da UF do Web Service)</option>
+                              <option>apresentou a rejeição 266 (Rejeição: Série utilizada não permitida no Web Service)</option>
+                              <option>apresentou a rejeição 267 (Rejeição: NF Complementar referencia uma NF-e inexistente)</option>
+                              <option>apresentou a rejeição 268 (Rejeição: NF Complementar referencia outra NF-e Complementar)</option>
+                              <option>apresentou a rejeição 269 (Rejeição: CNPJ Emitente da NF Complementar difere do CNPJ da NF Referenciada)</option>
+                              <option>apresentou a rejeição 270 (Rejeição: Código Município do Fato Gerador: dígito inválido)</option>
+                              <option>apresentou a rejeição 271 (Rejeição: Código Município do Fato Gerador: difere da UF do emitente)</option>
+                              <option>apresentou a rejeição 272 (Rejeição: Código Município do Emitente inexistente)</option>
+                              <option>apresentou a rejeição 273 (Rejeição: Código Município do Emitente: difere da UF do emitente)</option>
+                              <option>apresentou a rejeição 274 (Rejeição: Código Município do Destinatário inexistente)</option>
+                              <option>apresentou a rejeição 275 (Rejeição: Código Município do Destinatário: difere da UF do Destinatário)</option>
+                              <option>apresentou a rejeição 276 (Rejeição: Código Município do Local de Retirada inexistente)</option>
+                              <option>apresentou a rejeição 277 (Rejeição: Código Município do Local de Retirada: difere da UF do Local de Retirada)</option>
+                              <option>apresentou a rejeição 278 (Rejeição: Código Município do Local de Entrega inexistente)</option>
+                              <option>apresentou a rejeição 279 (Rejeição: Código Município do Local de Entrega: difere da UF do Local de Entrega)</option>
+                              <option>apresentou a rejeição 280 (Rejeição: Certificado Transmissor inválido)</option>
+                              <option>apresentou a rejeição 281 (Rejeição: Certificado Transmissor Data Validade)</option>
+                              <option>apresentou a rejeição 282 (Rejeição: Certificado Transmissor sem CNPJ)</option>
+                              <option>apresentou a rejeição 283 (Rejeição: Certificado Transmissor – erro Cadeia de Certificação)</option>
+                              <option>apresentou a rejeição 284 (Rejeição: Certificado Transmissor revogado)</option>
+                              <option>apresentou a rejeição 285 (Rejeição: Certificado Transmissor difere ICP-Brasil)</option>
+                              <option>apresentou a rejeição 286 (Rejeição: Certificado Transmissor erro no acesso a LCR)</option>
+                              <option>apresentou a rejeição 287 (Rejeição: Código Município do Fato Gerador de ISSQN inexistente [nItem:nnn])</option>
+                              <option>apresentou a rejeição 288 (Rejeição: Código Município do Fato Gerador do Transporte inexistente)</option>
+                              <option>apresentou a rejeição 289 (Rejeição: Código da UF informada diverge da UF solicitada)</option>
+                              <option>apresentou a rejeição 290 (Rejeição: Certificado Assinatura inválido)</option>
+                              <option>apresentou a rejeição 291 (Rejeição: Certificado Assinatura Data Validade)</option>
+                              <option>apresentou a rejeição 292 (Rejeição: Certificado Assinatura sem CNPJ)</option>
+                              <option>apresentou a rejeição 293 (Rejeição: Certificado Assinatura – erro Cadeia de Certificação)</option>
+                              <option>apresentou a rejeição 294 (Rejeição: Certificado Assinatura revogado)</option>
+                              <option>apresentou a rejeição 295 (Rejeição: Certificado Assinatura difere ICP-Brasil)</option>
+                              <option>apresentou a rejeição 296 (Rejeição: Certificado Assinatura erro no acesso a LCR)</option>
+                              <option>apresentou a rejeição 297 (Rejeição: Assinatura difere do calculado)</option>
+                              <option>apresentou a rejeição 298 (Rejeição: Assinatura difere do padrão do Sistema)</option>
+                              <option>apresentou a rejeição 299 (Rejeição: XML da área de cabeçalho com codificação diferente de UTF-8)</option>
+                              <option>apresentou a rejeição 301 (Uso Denegado: Irregularidade fiscal do emitente)</option>
+                              <option>apresentou a rejeição 302 (Rejeição: Irregularidade fiscal do destinatário)</option>
+                              <option>apresentou a rejeição 303 (Uso Denegado: Destinatário não habilitado a operar na UF)</option>
+                              <option>apresentou a rejeição 304 (Rejeição: Pedido de Cancelamento para NF-e com evento da Suframa)</option>
+                              <option>apresentou a rejeição 315 (Rejeição: Data de Emissão anterior ao início da autorização de Nota Fiscal na UF)</option>
+                              <option>apresentou a rejeição 316 (Rejeição: Nota Fiscal referenciada com a mesma Chave de Acesso da Nota Fiscal atual)</option>
+                              <option>apresentou a rejeição 317 (Rejeição: NF modelo 1 referenciada com data de emissão inválida)</option>
+                              <option>apresentou a rejeição 318 (Rejeição: Contranota de Produtor sem Nota Fiscal referenciada)</option>
+                              <option>apresentou a rejeição 319 (Rejeição: Contranota de Produtor não pode referenciar somente Nota Fiscal de entrada)</option>
+                              <option>apresentou a rejeição 320 (Rejeição: Contranota de Produtor referencia somente NF de outro emitente)</option>
+                              <option>apresentou a rejeição 321 (Rejeição: NF-e de devolução de mercadoria não possui documento fiscal referenciado)</option>
+                              <option>apresentou a rejeição 322 (Rejeição: NF de produtor referenciada com data de emissão inválida)</option>
+                              <option>apresentou a rejeição 323 (Rejeição: CNPJ autorizado para download inválido)</option>
+                              <option>apresentou a rejeição 324 (Rejeição: CNPJ do destinatário já autorizado para download)</option>
+                              <option>apresentou a rejeição 325 (Rejeição: CPF autorizado para download inválido)</option>
+                              <option>apresentou a rejeição 326 (Rejeição: CPF do destinatário já autorizado para download)</option>
+                              <option>apresentou a rejeição 327 (Rejeição: CFOP inválido para Nota Fiscal com finalidade de devolução de mercadoria [nItem:nnn])</option>
+                              <option>apresentou a rejeição 328 (Rejeição: CFOP de devolução de mercadoria para NF-e que não tem finalidade de devolução de mercadoria)</option>
+                              <option>apresentou a rejeição 329 (Rejeição: Número da DI /DSI inválido)</option>
+                              <option>apresentou a rejeição 330 (Rejeição: Informar o Valor da AFRMM na importação por via marítima)</option>
+                              <option>apresentou a rejeição 331 (Rejeição: Informar o CNPJ do adquirente ou do encomendante nesta forma de importação)</option>
+                              <option>apresentou a rejeição 332 (Rejeição: CNPJ do adquirente ou do encomendante da importação inválido)</option>
+                              <option>apresentou a rejeição 333 (Rejeição: Informar a UF do adquirente ou do encomendante nesta forma de importação)</option>
+                              <option>apresentou a rejeição 334 (Rejeição: Número do processo de drawback não informado na importação)</option>
+                              <option>apresentou a rejeição 335 (Rejeição: Número do processo de drawback na importação inválido)</option>
+                              <option>apresentou a rejeição 336 (Rejeição: Informado o grupo de exportação no item para CFOP que não é de exportação)</option>
+                              <option>apresentou a rejeição 337 (Rejeição: NFC-e para emitente pessoa física)</option>
+                              <option>apresentou a rejeição 338 (Rejeição: Número do processo de drawback não informado na exportação)</option>
+                              <option>apresentou a rejeição 339 (Rejeição: Número do processo de drawback na exportação inválido)</option>
+                              <option>apresentou a rejeição 340 (Rejeição: Não informado o grupo de exportação indireta no item)</option>
+                              <option>apresentou a rejeição 341 (Rejeição: Número do registro de exportação inválido)</option>
+                              <option>apresentou a rejeição 342 (Rejeição: Chave de Acesso informada na Exportação Indireta com DV inválido)</option>
+                              <option>apresentou a rejeição 343 (Rejeição: Modelo da NF-e informada na Exportação Indireta diferente de 55)</option>
+                              <option>apresentou a rejeição 344 (Rejeição: Duplicidade de NF-e informada na Exportação Indireta (Chave de Acesso informada mais de uma vez))</option>
+                              <option>apresentou a rejeição 345 (Rejeição: Chave de Acesso informada na Exportação Indireta não consta como NF-e referenciada)</option>
+                              <option>apresentou a rejeição 346 (Rejeição: Somatório das quantidades informadas na Exportação Indiretanão corresponde a quantidade total do item)</option>
+                              <option>apresentou a rejeição 347 (Rejeição: Descrição do combustível diverge da descrição adotada pela ANP)</option>
+                              <option>apresentou a rejeição 348 (Rejeição: NFC-e com grupo RECOPI)</option>
+                              <option>apresentou a rejeição 349 (Rejeição: Número RECOPI não informado)</option>
+                              <option>apresentou a rejeição 350 (Rejeição: Número RECOPI inválido)</option>
+                              <option>apresentou a rejeição 351 (Rejeição: Valor do ICMS da Operação no CST=51 difere do produto BC e Alíquota)</option>
+                              <option>apresentou a rejeição 352 (Rejeição: Valor do ICMS Diferido no CST=51 difere do produto Valor ICMS Operação e percentual diferimento)</option>
+                              <option>apresentou a rejeição 353 (Rejeição: Valor do ICMS no CST=51 não corresponde a diferença do ICMS operação e ICMS diferido)</option>
+                              <option>apresentou a rejeição 354 (Rejeição: Informado grupo de devolução de tributos para NF-e que não tem finalidade de devolução de mercadoria)</option>
+                              <option>apresentou a rejeição 355 (Rejeição: Informar o local de saída do Pais no caso da exportação)</option>
+                              <option>apresentou a rejeição 356 (Rejeição: Informar o local de saída do Pais somente no caso da exportação)</option>
+                              <option>apresentou a rejeição 357 (Rejeição: Chave de Acesso do grupo de Exportação Indireta inexistente [nRef: xxx])</option>
+                              <option>apresentou a rejeição 358 (Rejeição: Chave de Acesso do grupo de Exportação Indireta cancelada ou denegada [nRef: xxx])</option>
+                              <option>apresentou a rejeição 359 (Rejeição: NF-e de venda a Órgão Público sem informar a Nota de Empenho)</option>
+                              <option>apresentou a rejeição 360 (Rejeição: NF-e com Nota de Empenho inválida para a UF.)</option>
+                              <option>apresentou a rejeição 361 (Rejeição: NF-e com Nota de Empenho inexistente na UF.)</option>
+                              <option>apresentou a rejeição 362 (Rejeição: Venda de combustível sem informação do Transportador)</option>
+                              <option>apresentou a rejeição 364 (Rejeição: Total do valor da dedução do ISS difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 365 (Rejeição: Total de outras retenções difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 366 (Rejeição: Total do desconto incondicionado ISS difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 367 (Rejeição: Total do desconto condicionado ISS difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 368 (Rejeição: Total de ISS retido difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 369 (Rejeição: Não informado o grupo avulsa na emissão pelo Fisco)</option>
+                              <option>apresentou a rejeição 370 (Rejeição: Nota Fiscal Avulsa com tipo de emissão inválido)</option>
+                              <option>apresentou a rejeição 372 (Rejeição: Destinatário com identificação de estrangeiro com caracteres inválidos)</option>
+                              <option>apresentou a rejeição 373 (Rejeição: Descrição do primeiro item diferente de NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO – SEM VALOR FISCAL)</option>
+                              <option>apresentou a rejeição 374 (Rejeição: CFOP incompatível com o grupo de tributação [nItem:nnn])</option>
+                              <option>apresentou a rejeição 375 (Rejeição: NF-e com CFOP 5929 (Lançamento relativo a Cupom Fiscal) referencia uma NFC-e [nItem:nnn])</option>
+                              <option>apresentou a rejeição 376 (Rejeição: Data do Desembaraço Aduaneiro inválida [nItem:nnn])</option>
+                              <option>apresentou a rejeição 378 (Rejeição: Grupo de Combustível sem a informação de Encerrante [nItem:nnn])</option>
+                              <option>apresentou a rejeição 379 (Rejeição: Grupo de Encerrante na NF-e (modelo 55) para CFOP diferente de venda de combustível para consumidor final [nItem:nnn])</option>
+                              <option>apresentou a rejeição 380 (Rejeição: Valor do Encerrante final não é superior ao Encerrante inicial [nItem:nnn])</option>
+                              <option>apresentou a rejeição 381 (Rejeição:Grupo de tributação ICMS90, informando dados do ICMS-ST [nItem:nnn])</option>
+                              <option>apresentou a rejeição 382 (Rejeição:CFOP não permitido para o CST informado [nItem:nnn])</option>
+                              <option>apresentou a rejeição 383 (Rejeição: Item com CSOSN indevido [nItem:nnn])</option>
+                              <option>apresentou a rejeição 384 (Rejeição: CSOSN não permitido para a UF [nItem:nnn])</option>
+                              <option>apresentou a rejeição 385 (Rejeição:Grupo de tributação ICMS900, informando dados do ICMS-ST [nItem:nnn])</option>
+                              <option>apresentou a rejeição 386 (Rejeição: CFOP não permitido para o CSOSN informado [nItem:nnn])</option>
+                              <option>apresentou a rejeição 387 (Rejeição: Código de Enquadramento Legal do IPI inválido [nItem:nnn])</option>
+                              <option>apresentou a rejeição 388 (Rejeição: Código de Situação Tributária do IPI incompatível com o Código de Enquadramento Legal do IPI [nItem:nnn])</option>
+                              <option>apresentou a rejeição 389 (Rejeição: Código Município ISSQN inexistente [nItem:nnn])</option>
+                              <option>apresentou a rejeição 390 (Rejeição: Nota Fiscal com grupo de devolução de tributos [nItem:nnn])</option>
+                              <option>apresentou a rejeição 391 (Rejeição: Não informados os dados do cartão de crédito / débito nas Formas de Pagamento da Nota Fiscal)</option>
+                              <option>apresentou a rejeição 392 (Rejeição: Não informados os dados da operação de pagamento por cartão de crédito / débito)</option>
+                              <option>apresentou a rejeição 393 (Rejeição: NF-e com o grupo de Informações Suplementares)</option>
+                              <option>apresentou a rejeição 394 (Rejeição: Nota Fiscal sem a informação do QR-Code)</option>
+                              <option>apresentou a rejeição 395 (Rejeição: Endereço do site da UF da Consulta via QRCode diverge do previsto)</option>
+                              <option>apresentou a rejeição 396 (Rejeição: Parâmetro do QR-Code inexistente (chAcesso))</option>
+                              <option>apresentou a rejeição 397 (Rejeição: Parâmetro do QR-Code divergente da Nota Fiscal (chAcesso))</option>
+                              <option>apresentou a rejeição 398 (Rejeição: Parâmetro nVersao do QR-Code difere do previsto)</option>
+                              <option>apresentou a rejeição 399 (Rejeição: Parâmetro de Identificação do destinatário no QR-Code para Nota Fiscal sem identificação do destinatário)</option>
+                              <option>apresentou a rejeição 400 (Rejeição: Parâmetro do QR-Code não está no formato hexadecimal (dhEmi))</option>
+                              <option>apresentou a rejeição 401 (Rejeição: CPF do emitente inválido)</option>
+                              <option>apresentou a rejeição 402 (Rejeição: XML da área de dados com codificação diferente de UTF-8)</option>
+                              <option>apresentou a rejeição 403 (Rejeição: O grupo de informações da NF-e avulsa é de uso exclusivo do Fisco)</option>
+                              <option>apresentou a rejeição 404 (Rejeição: Uso de prefixo de namespace não permitido)</option>
+                              <option>apresentou a rejeição 405 (Rejeição: Código do país do emitente: dígito inválido)</option>
+                              <option>apresentou a rejeição 406 (Rejeição: Código do país do destinatário: dígito inválido)</option>
+                              <option>apresentou a rejeição 407 (Rejeição: O CPF só pode ser informado no campo emitente para a NF-e avulsa)</option>
+                              <option>apresentou a rejeição 408 (Rejeição: Evento não disponível para Autor pessoa física)</option>
+                              <option>apresentou a rejeição 409 (Rejeição: Campo cUF inexistente no elemento nfeCabecMsg do SOAP Header)</option>
+                              <option>apresentou a rejeição 410 (Rejeição: UF informada no campo cUF não é atendida pelo Web Service)</option>
+                              <option>apresentou a rejeição 411 (Rejeição: Campo versaoDados inexistente no elemento nfeCabecMsg do SOAP Header)</option>
+                              <option>apresentou a rejeição 417 (Rejeição: Total do ICMS superior ao valor limite estabelecido)</option>
+                              <option>apresentou a rejeição 418 (Rejeição: Total do ICMS ST superior ao valor limite estabelecido)</option>
+                              <option>apresentou a rejeição 420 (Rejeição: Cancelamento para NF-e já cancelada)</option>
+                              <option>apresentou a rejeição 450 (Rejeição: Modelo da NF-e diferente de 55)</option>
+                              <option>apresentou a rejeição 451 (Rejeição: Processo de emissão informado inválido)</option>
+                              <option>apresentou a rejeição 452 (Rejeição: Tipo Autorizador do Recibo diverge do Órgão Autorizador)</option>
+                              <option>apresentou a rejeição 453 (Rejeição: Ano de inutilização não pode ser superior ao Ano atual)</option>
+                              <option>apresentou a rejeição 454 (Rejeição: Ano de inutilização não pode ser inferior a 2006)</option>
+                              <option>apresentou a rejeição 455 (Rejeição: Órgão Autor do evento diferente da UF da Chave de Acesso)</option>
+                              <option>apresentou a rejeição 461 (Rejeição: Informado percentual de Gás Natural na mistura para produto diferente de GLP)</option>
+                              <option>apresentou a rejeição 462 (Rejeição:Código Identificador do CSC no QR-Code não cadastrado na SEFAZ)</option>
+                              <option>apresentou a rejeição 463 (Rejeição:Código Identificador do CSC no QR-Code foi revogado pela empresa)</option>
+                              <option>apresentou a rejeição 464 (Rejeição: Código de Hash no QR-Code difere do calculado)</option>
+                              <option>apresentou a rejeição 465 (Rejeição: Número de Controle da FCI inexistente)</option>
+                              <option>apresentou a rejeição 466 (Rejeição: Evento com Tipo de Autor incompatível)</option>
+                              <option>apresentou a rejeição 467 (Rejeição: Dados da NF-e divergentes do EPEC)</option>
+                              <option>apresentou a rejeição 468 (Rejeição: NF-e com Tipo Emissão = 4, sem EPEC correspondente)</option>
+                              <option>apresentou a rejeição 471 (Rejeição: Informado NCM=00 indevidamente)</option>
+                              <option>apresentou a rejeição 476 (Rejeição: Código da UF diverge da UF da primeira NF-e do Lote)</option>
+                              <option>apresentou a rejeição 477 (Rejeição: Código do órgão diverge do órgão do primeiro evento do Lote)</option>
+                              <option>apresentou a rejeição 478 (Rejeição: Local da entrega não informado para faturamento direto de veículos novos)</option>
+                              <option>apresentou a rejeição 479 (Rejeição: Data de Emissão anterior a data de credenciamento ou anterior a Data de Abertura do estabelecimento)</option>
+                              <option>apresentou a rejeição 480 (Rejeição: Código Município do Emitente diverge do cadastrado na UF)</option>
+                              <option>apresentou a rejeição 481 (Rejeição: Código Regime Tributário do emitente diverge do cadastro na SEFAZ)</option>
+                              <option>apresentou a rejeição 482 (Rejeição: Código do Município do Destinatário diverge do cadastrado na UF)</option>
+                              <option>apresentou a rejeição 483 (Rejeição: Valor do desconto maior que valor do produto [nItem:nnn])</option>
+                              <option>apresentou a rejeição 484 (Rejeição: Chave de Acesso com tipo de emissão diferente de 4 (posição 35 da Chave de Acesso))</option>
+                              <option>apresentou a rejeição 485 (Rejeição: Duplicidade de numeração do EPEC (Modelo, CNPJ, Série e Número))</option>
+                              <option>apresentou a rejeição 486 (Rejeição: Não informado o Grupo de Autorização para UF que exige a identificação)</option>
+                              <option>apresentou a rejeição 487 (Rejeição: Escritório de Contabilidade não cadastrado na SEFAZ)</option>
+                              <option>apresentou a rejeição 488 (Rejeição: Vendas do Emitente incompatíveis com o Porte da Empresa)</option>
+                              <option>apresentou a rejeição 489 (Rejeição: CNPJ informado inválido (DV ou zeros))</option>
+                              <option>apresentou a rejeição 490 (Rejeição: CPF informado inválido (DV ou zeros))</option>
+                              <option>apresentou a rejeição 491 (Rejeição: O tpEvento informado inválido)</option>
+                              <option>apresentou a rejeição 492 (Rejeição: O verEvento informado inválido)</option>
+                              <option>apresentou a rejeição 493 (Rejeição: Evento não atende o Schema XML específico)</option>
+                              <option>apresentou a rejeição 494 (Rejeição: Chave de Acesso inexistente)</option>
+                              <option>apresentou a rejeição 496 (Rejeição: Não informado o tipo de integração no pagamento com cartão de crédito / débito)</option>
+                              <option>apresentou a rejeição 501 (Rejeição: Pedido de Cancelamento intempestivo (NF-e autorizada a mais de 7 dias))</option>
+                              <option>apresentou a rejeição 502 (Rejeição: Erro na Chave de Acesso – Campo Id não corresponde à concatenação dos campos correspondentes)</option>
+                              <option>apresentou a rejeição 503 (Rejeição: Série utilizada fora da faixa permitida no SCAN (900-999))</option>
+                              <option>apresentou a rejeição 504 (Rejeição: Data de Entrada/Saída posterior ao permitido)</option>
+                              <option>apresentou a rejeição 505 (Rejeição: Data de Entrada/Saída anterior ao permitido)</option>
+                              <option>apresentou a rejeição 506 (Rejeição: Data de Saída menor que a Data de Emissão)</option>
+                              <option>apresentou a rejeição 507 (Rejeição: O CNPJ do destinatário/remetente não deve ser informado em operação com o exterior)</option>
+                              <option>apresentou a rejeição 508 (Rejeição: CST incompatível na operação com Não Contribuinte [nItem:999])</option>
+                              <option>apresentou a rejeição 509 (Rejeição: Informado código de município diferente de “9999999” para operação com o exterior)</option>
+                              <option>apresentou a rejeição 510 (Rejeição: Operação com Exterior e Código País destinatário é 1058 (Brasil) ou não informado)</option>
+                              <option>apresentou a rejeição 511 (Rejeição: Não é de Operação com Exterior e Código País destinatário difere de 1058 (Brasil))</option>
+                              <option>apresentou a rejeição 512 (Rejeição: CNPJ do Local de Retirada inválido)</option>
+                              <option>apresentou a rejeição 513 (Rejeição: Código Município do Local de Retirada deve ser 9999999 para UF retirada = EX)</option>
+                              <option>apresentou a rejeição 514 (Rejeição: CNPJ do Local de Entrega inválido)</option>
+                              <option>apresentou a rejeição 515 (Rejeição: Código Município do Local de Entrega deve ser 9999999 para UF entrega = EX)</option>
+                              <option>apresentou a rejeição 516 (Rejeição: Falha no schema XML – inexiste a tag raiz esperada para a mensagem)</option>
+                              <option>apresentou a rejeição 517 (Rejeição: Falha no schema XML – inexiste atributo versao na tag raiz da mensagem)</option>
+                              <option>apresentou a rejeição 518 (Rejeição: CFOP de entrada para NF-e de saída)</option>
+                              <option>apresentou a rejeição 519 (Rejeição: CFOP de saída para NF-e de entrada)</option>
+                              <option>apresentou a rejeição 520 (Rejeição: CFOP de Operação com Exterior e UF destinatário difere de EX)</option>
+                              <option>apresentou a rejeição 521 (Rejeição: CFOP de Operação Estadual e UF do emitente difere da UF do destinatário para destinatário contribuinte do ICMS.)</option>
+                              <option>apresentou a rejeição 522 (Rejeição: CFOP de Operação Estadual e UF emitente difere da UF remetente para remetente contribuinte do ICMS.)</option>
+                              <option>apresentou a rejeição 523 (Rejeição: CFOP não é de Operação Estadual e UF emitente igual a UF destinatário.)</option>
+                              <option>apresentou a rejeição 524 (Rejeição: CFOP de Operação com Exterior e não informado NCM)</option>
+                              <option>apresentou a rejeição 525 (Rejeição: CFOP de Importação e não informado dados da DI)</option>
+                              <option>apresentou a rejeição 526 (Rejeição: Consulta a uma Chave de Acesso muito antiga)</option>
+                              <option>apresentou a rejeição 527 (Rejeição: Operação de Exportação com informação de ICMS incompatível)</option>
+                              <option>apresentou a rejeição 528 (Rejeição: Valor do ICMS difere do produto BC e Alíquota)</option>
+                              <option>apresentou a rejeição 529 (Rejeição: CST incompatível na operação com Contribuinte Isento de Inscrição Estadual [nItem:999])</option>
+                              <option>apresentou a rejeição 530 (Rejeição: Operação com tributação de ISSQN sem informar a Inscrição Municipal)</option>
+                              <option>apresentou a rejeição 531 (Rejeição: Total da BC ICMS difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 532 (Rejeição: Total do ICMS difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 533 (Rejeição: Total da BC ICMS-ST difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 534 (Rejeição: Total do ICMS-ST difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 535 (Rejeição: Total do Frete difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 536 (Rejeição: Total do Seguro difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 537 (Rejeição: Total do Desconto difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 538 (Rejeição: Total do IPI difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 539 (Duplicidade de NF-e com diferença na Chave de Acesso [chNFe: 99999999999999999999999999999999999999999999][nRec:999999999999999])</option>
+                              <option>apresentou a rejeição 540 (Rejeição: CPF do Local de Retirada inválido)</option>
+                              <option>apresentou a rejeição 541 (Rejeição: CPF do Local de Entrega inválido)</option>
+                              <option>apresentou a rejeição 542 (Rejeição: CNPJ do Transportador inválido)</option>
+                              <option>apresentou a rejeição 543 (Rejeição: CPF do Transportador inválido)</option>
+                              <option>apresentou a rejeição 544 (Rejeição: IE do Transportador inválida)</option>
+                              <option>apresentou a rejeição 545 (Rejeição: Falha no schema XML – versão informada na versaoDados do SOAPHeader diverge da versão da mensagem)</option>
+                              <option>apresentou a rejeição 546 (Rejeição: Erro na Chave de Acesso – Campo Id – falta a literal NFe)</option>
+                              <option>apresentou a rejeição 547 (Rejeição: Dígito Verificador da Chave de Acesso da NF-e Referenciada inválido)</option>
+                              <option>apresentou a rejeição 548 (Rejeição: CNPJ da NF referenciada inválido.)</option>
+                              <option>apresentou a rejeição 549 (Rejeição: CNPJ da NF referenciada de produtor inválido.)</option>
+                              <option>apresentou a rejeição 550 (Rejeição: CPF da NF referenciada de produtor inválido.)</option>
+                              <option>apresentou a rejeição 551 (Rejeição: IE da NF referenciada de produtor inválido.)</option>
+                              <option>apresentou a rejeição 552 (Rejeição: Dígito Verificador da Chave de Acesso do CT-e Referenciado inválido)</option>
+                              <option>apresentou a rejeição 553 (Rejeição: Tipo autorizador do recibo diverge do Órgão Autorizador.)</option>
+                              <option>apresentou a rejeição 554 (Rejeição: Série difere da faixa 0-899)</option>
+                              <option>apresentou a rejeição 555 (Rejeição: Tipo autorizador do protocolo diverge do Órgão Autorizador.)</option>
+                              <option>apresentou a rejeição 556 (Rejeição: Justificativa de entrada em contingência não deve ser informada para tipo de emissão normal.)</option>
+                              <option>apresentou a rejeição 557 (Rejeição: A Justificativa de entrada em contingência deve ser informada.)</option>
+                              <option>apresentou a rejeição 558 (Rejeição: Data de entrada em contingência posterior a data de recebimento.)</option>
+                              <option>apresentou a rejeição 559 (Rejeição: UF do Transportador não informada)</option>
+                              <option>apresentou a rejeição 560 (Rejeição: CNPJ base do emitente difere do CNPJ base da primeira NF-e do lote recebido)</option>
+                              <option>apresentou a rejeição 561 (Rejeição: Mês de Emissão informado na Chave de Acesso difere do Mês de Emissão da NF-e)</option>
+                              <option>apresentou a rejeição 562 (Rejeição: Código Numérico informado na Chave de Acesso difere do Código Numérico da NF-e [chNFe:99999999999999999999999999999999999999999999])</option>
+                              <option>apresentou a rejeição 563 (Rejeição: Já existe pedido de Inutilização com a mesma faixa de inutilização)</option>
+                              <option>apresentou a rejeição 564 (Rejeição: Total do Produto / Serviço difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 565 (Rejeição: Falha no schema XML – inexiste a tag raiz esperada para o lote de NF-e)</option>
+                              <option>apresentou a rejeição 567 (Rejeição: Falha no schema XML – versão informada na versaoDados do SOAPHeader diverge da versão do lote de NF-e)</option>
+                              <option>apresentou a rejeição 568 (Rejeição: Falha no schema XML – inexiste atributo versao na tag raiz do lote de NF-e)</option>
+                              <option>apresentou a rejeição 569 (Rejeição: Data de entrada em contingência muito atrasada)</option>
+                              <option>apresentou a rejeição 570 (Rejeição: Tipo de Emissão 3, 6 ou 7 só é válido nas contingências SCAN/SVC)</option>
+                              <option>apresentou a rejeição 571 (Rejeição: O tpEmis informado diferente de 3 para contingência SCAN)</option>
+                              <option>apresentou a rejeição 572 (Rejeição: Erro Atributo ID do evento não corresponde a concatenação dos campos (“ID” + tpEvento + chNFe + nSeqEvento))</option>
+                              <option>apresentou a rejeição 573 (Rejeição: Duplicidade de Evento)</option>
+                              <option>apresentou a rejeição 574 (Rejeição: O autor do evento diverge do emissor da NF-e)</option>
+                              <option>apresentou a rejeição 575 (Rejeição: O autor do evento diverge do destinatário da NF-e)</option>
+                              <option>apresentou a rejeição 576 (Rejeição: O autor do evento não é um órgão autorizado a gerar o evento)</option>
+                              <option>apresentou a rejeição 577 (Rejeição: A data do evento não pode ser menor que a data de emissão da NF-e)</option>
+                              <option>apresentou a rejeição 578 (Rejeição: A data do evento não pode ser maior que a data do processamento)</option>
+                              <option>apresentou a rejeição 579 (Rejeição: A data do evento não pode ser menor que a data de autorização para NF-e não emitida em contingência)</option>
+                              <option>apresentou a rejeição 580 (Rejeição: O evento exige uma NF-e autorizada)</option>
+                              <option>apresentou a rejeição 587 (Rejeição: Usar somente o namespace padrão da NF-e)</option>
+                              <option>apresentou a rejeição 588 (Rejeição: Não é permitida a presença de caracteres de edição no início/fim da mensagem ou entre as tags da mensagem)</option>
+                              <option>apresentou a rejeição 589 (Rejeição: Número do NSU informado superior ao maior NSU da base de dados da SEFAZ)</option>
+                              <option>apresentou a rejeição 590 (Rejeição: Informado CST para emissor do Simples Nacional (CRT=1))</option>
+                              <option>apresentou a rejeição 591 (Rejeição: Informado CSOSN para emissor que não é do Simples Nacional (CRT diferente de 1))</option>
+                              <option>apresentou a rejeição 592 (Rejeição: A NF-e deve ter pelo menos um item de produto sujeito ao ICMS)</option>
+                              <option>apresentou a rejeição 593 (Rejeição: CNPJ-Base consultado difere do CNPJ-Base do Certificado Digital)</option>
+                              <option>apresentou a rejeição 594 (Rejeição: O número de sequencia do evento informado é maior que o permitido)</option>
+                              <option>apresentou a rejeição 595 (Rejeição: Obrigatória a informação da justificativa do evento.)</option>
+                              <option>apresentou a rejeição 596 (Rejeição: Evento apresentado fora do prazo: [prazo vigente])</option>
+                              <option>apresentou a rejeição 597 (Rejeição: CFOP de Importação e não informado dados de IPI)</option>
+                              <option>apresentou a rejeição 598 (Rejeição: NF-e emitida em ambiente de homologação com Razão Social do destinatário diferente de NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO – SEM VALOR FISCAL)</option>
+                              <option>apresentou a rejeição 599 (Rejeição: CFOP de Importação e não informado dados de II)</option>
+                              <option>apresentou a rejeição 600 (Rejeição: CSOSN incompatível na operação com Não Contribuinte [nItem:999])</option>
+                              <option>apresentou a rejeição 601 (Rejeição: Total do II difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 602 (Rejeição: Total do PIS difere do somatório dos itens sujeitos ao ICMS)</option>
+                              <option>apresentou a rejeição 603 (Rejeição: Total do COFINS difere do somatório dos itens sujeitos ao ICMS)</option>
+                              <option>apresentou a rejeição 604 (Rejeição: Total do vOutro difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 605 (Rejeição: Total do vISS difere do somatório do vProd dos itens sujeitos ao ISSQN)</option>
+                              <option>apresentou a rejeição 606 (Rejeição: Total do vBC do ISS difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 607 (Rejeição: Total do ISS difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 608 (Rejeição: Total do PIS difere do somatório dos itens sujeitos ao ISSQN)</option>
+                              <option>apresentou a rejeição 609 (Rejeição: Total do COFINS difere do somatório dos itens sujeitos ao ISSQN)</option>
+                              <option>apresentou a rejeição 610 (Rejeição: Total da NF difere do somatório dos Valores compõe o valor Total da NF.)</option>
+                              <option>apresentou a rejeição 611 (Rejeição: cEAN inválido)</option>
+                              <option>apresentou a rejeição 612 (Rejeição: cEANTrib inválido)</option>
+                              <option>apresentou a rejeição 613 (Rejeição: Chave de Acesso difere da existente em BD)</option>
+                              <option>apresentou a rejeição 614 (Rejeição: Chave de Acesso inválida (Código UF inválido))</option>
+                              <option>apresentou a rejeição 615 (Rejeição: Chave de Acesso inválida (Ano menor que 06 ou Ano maior que Ano corrente))</option>
+                              <option>apresentou a rejeição 616 (Rejeição: Chave de Acesso inválida (Mês menor que 1 ou Mês maior que 12))</option>
+                              <option>apresentou a rejeição 617 (Rejeição: Chave de Acesso inválida (CNPJ zerado ou dígito inválido))</option>
+                              <option>apresentou a rejeição 618 (Rejeição: Chave de Acesso inválida (modelo diferente de 55 e 65))</option>
+                              <option>apresentou a rejeição 619 (Rejeição: Chave de Acesso inválida (número NF = 0))</option>
+                              <option>apresentou a rejeição 620 (Rejeição: Chave de Acesso difere da existente em BD)</option>
+                              <option>apresentou a rejeição 621 (Rejeição: CPF Emitente não cadastrado)</option>
+                              <option>apresentou a rejeição 622 (Rejeição: IE emitente não vinculada ao CPF)</option>
+                              <option>apresentou a rejeição 623 (Rejeição: CPF Destinatário não cadastrado)</option>
+                              <option>apresentou a rejeição 624 (Rejeição: IE Destinatário não vinculada ao CPF)</option>
+                              <option>apresentou a rejeição 625 (Rejeição: Inscrição SUFRAMA deve ser informada na venda com isenção para ZFM)</option>
+                              <option>apresentou a rejeição 626 (Rejeição: CFOP de operação isenta para ZFM diferente do previsto)</option>
+                              <option>apresentou a rejeição 627 (Rejeição: O valor do ICMS desonerado deve ser informado)</option>
+                              <option>apresentou a rejeição 628 (Rejeição: Total da NF superior ao valor limite estabelecido pela SEFAZ [Limite])</option>
+                              <option>apresentou a rejeição 629 (Rejeição: Valor do Produto difere do produto Valor Unitário de Comercialização e Quantidade Comercial)</option>
+                              <option>apresentou a rejeição 630 (Rejeição: Valor do Produto difere do produto Valor Unitário de Tributação e Quantidade Tributável)</option>
+                              <option>apresentou a rejeição 631 (Rejeição: CNPJ-Base do Destinatário difere do CNPJ-Base do Certificado Digital)</option>
+                              <option>apresentou a rejeição 632 (Rejeição: Solicitação fora de prazo, a NF-e não está mais disponível para download)</option>
+                              <option>apresentou a rejeição 633 (Rejeição: NF-e indisponível para download devido a ausência de Manifestação do Destinatário)</option>
+                              <option>apresentou a rejeição 634 (Rejeição: Destinatário da NF-e não tem o mesmo CNPJ raiz do solicitante do download)</option>
+                              <option>apresentou a rejeição 635 (Rejeição: NF-e com mesmo número e série já transmitida e aguardando processamento)</option>
+                              <option>apresentou a rejeição 650 (Rejeição: Evento de “Ciência da Emissão” para NF-e Cancelada ou Denegada)</option>
+                              <option>apresentou a rejeição 651 (Rejeição: Evento de “Desconhecimento da Operação” para NF-e Cancelada ou Denegada)</option>
+                              <option>apresentou a rejeição 653 (Rejeição: NF-e Cancelada, arquivo indisponível para download)</option>
+                              <option>apresentou a rejeição 654 (Rejeição: NF-e Denegada, arquivo indisponível para download)</option>
+                              <option>apresentou a rejeição 655 (Rejeição: Evento de Ciência da Emissão informado após a manifestação final do destinatário)</option>
+                              <option>apresentou a rejeição 656 (Rejeição: Consumo Indevido)</option>
+                              <option>apresentou a rejeição 657 (Rejeição: Código do Órgão diverge do órgão autorizador)</option>
+                              <option>apresentou a rejeição 658 (Rejeição: UF do destinatário da Chave de Acesso diverge da UF autorizadora)</option>
+                              <option>apresentou a rejeição 660 (Rejeição: CFOP de Combustível e não informado grupo de combustível [nItem:nnn])</option>
+                              <option>apresentou a rejeição 661 (Rejeição: NF-e já existente para o número do EPEC informado)</option>
+                              <option>apresentou a rejeição 662 (Rejeição: Numeração do EPEC está inutilizada na Base de Dados da SEFAZ)</option>
+                              <option>apresentou a rejeição 663 (Rejeição: Alíquota do ICMS com valor superior a 4 por cento na operação de saída interestadual com produtos importados [nItem:999])</option>
+                              <option>apresentou a rejeição 678 (Rejeição: NF referenciada com UF diferente da NF-e complementar)</option>
+                              <option>apresentou a rejeição 679 (Rejeição: Modelo de DF-e referenciado inválido)</option>
+                              <option>apresentou a rejeição 680 (Rejeição: Duplicidade de NF-e referenciada (Chave de Acesso referenciada mais de uma vez))</option>
+                              <option>apresentou a rejeição 681 (Rejeição: Duplicidade de NF Modelo 1 referenciada (CNPJ, Modelo, Série e Número))</option>
+                              <option>apresentou a rejeição 682 (Rejeição: Duplicidade de NF de Produtor referenciada (IE, Modelo, Série e Número))</option>
+                              <option>apresentou a rejeição 683 (Rejeição: Modelo do CT-e referenciado diferente de 57)</option>
+                              <option>apresentou a rejeição 684 (Rejeição: Duplicidade de Cupom Fiscal referenciado (Modelo, Número de Ordem e COO))</option>
+                              <option>apresentou a rejeição 685 (Rejeição: Total do Valor Aproximado dos Tributos difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 686 (Rejeição: NF Complementar referencia uma NF-e cancelada)</option>
+                              <option>apresentou a rejeição 687 (Rejeição: NF Complementar referencia uma NF-e denegada)</option>
+                              <option>apresentou a rejeição 688 (Rejeição: NF referenciada de Produtor com IE inexistente [nRef: xxx])</option>
+                              <option>apresentou a rejeição 689 (Rejeição: NF referenciada de Produtor com IE não vinculada ao CNPJ/CPF informado [nRef: xxx])</option>
+                              <option>apresentou a rejeição 690 (Rejeição: Pedido de Cancelamento para NF-e com CT-e)</option>
+                              <option>apresentou a rejeição 691 (Rejeição: Chave de Acesso da NF-e diverge da Chave de Acesso do EPEC)</option>
+                              <option>apresentou a rejeição 693 (Rejeição: Alíquota de ICMS superior a definida para a operação interestadual [nItem:999])</option>
+                              <option>apresentou a rejeição 694 (Rejeição: Não informado o grupo de ICMS para a UF de destino [nItem:999])</option>
+                              <option>apresentou a rejeição 695 (Rejeição: Informado indevidamente o grupo de ICMS para a UF de destino [nItem:999])</option>
+                              <option>apresentou a rejeição 697 (Rejeição: Alíquota interestadual do ICMS com origem diferente do previsto [nItem:999])</option>
+                              <option>apresentou a rejeição 698 (Rejeição: Alíquota interestadual do ICMS incompatível com as UF envolvidas na operação [nItem:999])</option>
+                              <option>apresentou a rejeição 699 (Rejeição: Percentual do ICMS Interestadual para a UF de destino difere do previsto para o ano da Data de Emissão [nItem:999])</option>
+                              <option>apresentou a rejeição 700 (Rejeição: Mensagem de Lote versão 3.xx. Enviar para o Web Service nfeAutorizacao)</option>
+                              <option>apresentou a rejeição 701 (Rejeição: Não informado Nota Fiscal referenciada (CFOP de Exportação Indireta))</option>
+                              <option>apresentou a rejeição 702 (Rejeição: NFC-e não é aceita pela UF do Emitente)</option>
+                              <option>apresentou a rejeição 703 (Rejeição: Data-Hora de Emissão posterior ao horário de recebimento)</option>
+                              <option>apresentou a rejeição 704 (Rejeição: NFC-e com Data-Hora de emissão atrasada)</option>
+                              <option>apresentou a rejeição 705 (Rejeição: NFC-e com data de entrada/saída)</option>
+                              <option>apresentou a rejeição 706 (Rejeição: NFC-e para operação de entrada)</option>
+                              <option>apresentou a rejeição 707 (Rejeição: NFC-e para operação interestadual ou com o exterior)</option>
+                              <option>apresentou a rejeição 708 (Rejeição: NFC-e não pode referenciar documento fiscal)</option>
+                              <option>apresentou a rejeição 709 (Rejeição: NFC-e com formato de DANFE inválido)</option>
+                              <option>apresentou a rejeição 710 (Rejeição: NF-e com formato de DANFE inválido)</option>
+                              <option>apresentou a rejeição 711 (Rejeição: NF-e com contingência off-line)</option>
+                              <option>apresentou a rejeição 712 (Rejeição: NFC-e com contingência off-line para a UF)</option>
+                              <option>apresentou a rejeição 713 (Rejeição: Tipo de Emissão diferente de 6 ou 7 para contingência da SVC acessada)</option>
+                              <option>apresentou a rejeição 714 (Rejeição: NFC-e com opção de contingência inválida (tpEmis=2, 4 (a critério da UF) ou 5))</option>
+                              <option>apresentou a rejeição 715 (Rejeição: NFC-e com finalidade inválida)</option>
+                              <option>apresentou a rejeição 716 (Rejeição: NFC-e em operação não destinada a consumidor final)</option>
+                              <option>apresentou a rejeição 717 (Rejeição: NFC-e em operação não presencial)</option>
+                              <option>apresentou a rejeição 718 (Rejeição: NFC-e não deve informar IE de Substituto Tributário)</option>
+                              <option>apresentou a rejeição 719 (Rejeição: NF-e sem a identificação do destinatário)</option>
+                              <option>apresentou a rejeição 720 (Rejeição: Na operação com Exterior deve ser informada tag idEstrangeiro)</option>
+                              <option>apresentou a rejeição 721 (Rejeição: Operação interestadual deve informar CNPJ ou CPF)</option>
+                              <option>apresentou a rejeição 723 (Rejeição: Operação interna com idEstrangeiro informado deve ser para consumidor final)</option>
+                              <option>apresentou a rejeição 724 (Rejeição: NF-e sem o nome do destinatário)</option>
+                              <option>apresentou a rejeição 725 (Rejeição: NFC-e com CFOP inválido [nItem:nnn])</option>
+                              <option>apresentou a rejeição 726 (Rejeição: NF-e sem a informação de endereço do destinatário)</option>
+                              <option>apresentou a rejeição 727 (Rejeição: Operação com Exterior e UF diferente de EX)</option>
+                              <option>apresentou a rejeição 728 (Rejeição: NF-e sem informação da IE do destinatário)</option>
+                              <option>apresentou a rejeição 729 (Rejeição: NFC-e com informação da IE do destinatário)</option>
+                              <option>apresentou a rejeição 730 (Rejeição: NFC-e com Inscrição Suframa)</option>
+                              <option>apresentou a rejeição 731 (Rejeição: CFOP de operação com Exterior e idDest <> 3)</option>
+                              <option>apresentou a rejeição 732 (Rejeição: CFOP de operação interestadual e idDest <> 2)</option>
+                              <option>apresentou a rejeição 733 (Rejeição: CFOP de operação interna e idDest <> 1)</option>
+                              <option>apresentou a rejeição 734 (Rejeição: NFC-e com Unidade de Comercialização inválida)</option>
+                              <option>apresentou a rejeição 735 (Rejeição: NFC-e com Unidade de Tributação inválida)</option>
+                              <option>apresentou a rejeição 736 (Rejeição: NFC-e com grupo de Veículos novos)</option>
+                              <option>apresentou a rejeição 737 (Rejeição: NFC-e com grupo de Medicamentos)</option>
+                              <option>apresentou a rejeição 738 (Rejeição: NFC-e com grupo de Armamentos)</option>
+                              <option>apresentou a rejeição 740 (Rejeição: Item com Repasse de ICMS retido por Substituto Tributário [nItem:nnn])</option>
+                              <option>apresentou a rejeição 741 (Rejeição: NFC-e com Partilha de ICMS entre UF)</option>
+                              <option>apresentou a rejeição 742 (Rejeição: NFC-e com grupo do IPI)</option>
+                              <option>apresentou a rejeição 743 (Rejeição: NFC-e com grupo do II)</option>
+                              <option>apresentou a rejeição 745 (Rejeição: NF-e sem grupo do PIS)</option>
+                              <option>apresentou a rejeição 746 (Rejeição: NFC-e com grupo do PIS-ST)</option>
+                              <option>apresentou a rejeição 748 (Rejeição: NF-e sem grupo da COFINS)</option>
+                              <option>apresentou a rejeição 749 (Rejeição: NFC-e com grupo da COFINS-ST)</option>
+                              <option>apresentou a rejeição 750 (Rejeição: NFC-e com valor total superior ao permitido para destinatário não identificado (Código) [Limite])</option>
+                              <option>apresentou a rejeição 751 (Rejeição: NFC-e com valor total superior ao permitido para destinatário não identificado (Nome) [Limite])</option>
+                              <option>apresentou a rejeição 752 (Rejeição: NFC-e com valor total superior ao permitido para destinatário não identificado (Endereço) [Limite])</option>
+                              <option>apresentou a rejeição 753 (Rejeição: NFC-e com Frete)</option>
+                              <option>apresentou a rejeição 754 (Rejeição: NFC-e com dados do Transportador)</option>
+                              <option>apresentou a rejeição 755 (Rejeição: NFC-e com dados de Retenção do ICMS no Transporte)</option>
+                              <option>apresentou a rejeição 756 (Rejeição: NFC-e com dados do veículo de Transporte)</option>
+                              <option>apresentou a rejeição 757 (Rejeição: NFC-e com dados de Reboque do veículo de Transporte)</option>
+                              <option>apresentou a rejeição 758 (Rejeição: NFC-e com dados do Vagão de Transporte)</option>
+                              <option>apresentou a rejeição 759 (Rejeição: NFC-e com dados da Balsa de Transporte)</option>
+                              <option>apresentou a rejeição 760 (Rejeição: NFC-e com dados de cobrança (Fatura, Duplicata))</option>
+                              <option>apresentou a rejeição 761 (Rejeição: Código de Produtos ANP inexistente)</option>
+                              <option>apresentou a rejeição 762 (Rejeição: NFC-e com dados de compras (Empenho, Pedido, Contrato))</option>
+                              <option>apresentou a rejeição 763 (Rejeição: NFC-e com dados de aquisição de Cana)</option>
+                              <option>apresentou a rejeição 764 (Rejeição: Solicitada resposta síncrona para Lote com mais de uma NF-e (indSinc=1))</option>
+                              <option>apresentou a rejeição 765 (Rejeição: Lote só poderá conter NF-e ou NFC-e)</option>
+                              <option>apresentou a rejeição 766 (Rejeição: Item com CST indevido [nItem:nnn])</option>
+                              <option>apresentou a rejeição 767 (Rejeição: NFC-e com somatório dos pagamentos diferente do total da Nota Fiscal)</option>
+                              <option>apresentou a rejeição 768 (Rejeição: NF-e não deve possuir o grupo de Formas de Pagamento)</option>
+                              <option>apresentou a rejeição 769 (Rejeição: A critério da UF NFC-e deve possuir o grupo de Formas de Pagamento)</option>
+                              <option>apresentou a rejeição 770 (Rejeição: NFC-e autorizada há mais de 24 horas.)</option>
+                              <option>apresentou a rejeição 771 (Rejeição: Operação Interestadual e UF de destino com EX)</option>
+                              <option>apresentou a rejeição 772 (Rejeição: Operação Interestadual e UF de destino igual à UF do emitente)</option>
+                              <option>apresentou a rejeição 773 (Rejeição: Operação Interna e UF de destino difere da UF do emitente)</option>
+                              <option>apresentou a rejeição 774 (Rejeição: NFC-e com indicador de item não participante do total)</option>
+                              <option>apresentou a rejeição 775 (Rejeição: Modelo da NFC-e diferente de 65)</option>
+                              <option>apresentou a rejeição 776 (Rejeição: Solicitada resposta síncrona para UF que não disponibiliza este atendimento (indSinc=1))</option>
+                              <option>apresentou a rejeição 777 (Rejeição: Obrigatória a informação do NCM completo)</option>
+                              <option>apresentou a rejeição 778 (Rejeição: Informado NCM inexistente [nItem:nnn])</option>
+                              <option>apresentou a rejeição 779 (Rejeição: NFC-e com NCM incompatível)</option>
+                              <option>apresentou a rejeição 780 (Rejeição: Total da NFC-e superior ao valor limite estabelecido pela SEFAZ [Limite])</option>
+                              <option>apresentou a rejeição 781 (Rejeição: Emissor não habilitado para emissão da NFC-e)</option>
+                              <option>apresentou a rejeição 782 (Rejeição: NFC-e não é autorizada pelo SCAN)</option>
+                              <option>apresentou a rejeição 783 (Rejeição: NFC-e não é autorizada pela SVC)</option>
+                              <option>apresentou a rejeição 784 (Rejeição: NFC-e não permite o evento de Carta de Correção)</option>
+                              <option>apresentou a rejeição 785 (Rejeição: NFC-e com entrega a domicílio não permitida pela UF)</option>
+                              <option>apresentou a rejeição 786 (Rejeição: NFC-e de entrega a domicílio sem dados do Transportador)</option>
+                              <option>apresentou a rejeição 787 (Rejeição: NFC-e de entrega a domicílio sem a identificação do destinatário)</option>
+                              <option>apresentou a rejeição 788 (Rejeição: NFC-e de entrega a domicílio sem o endereço do destinatário)</option>
+                              <option>apresentou a rejeição 789 (Rejeição: NFC-e para destinatário contribuinte de ICMS)</option>
+                              <option>apresentou a rejeição 790 (Rejeição: Operação com Exterior para destinatário Contribuinte de ICMS)</option>
+                              <option>apresentou a rejeição 791 (Rejeição: NF-e com indicação de destinatário isento de IE, com a informação da IE do destinatário)</option>
+                              <option>apresentou a rejeição 792 (Rejeição: Informada a IE do destinatário para operação com destinatário no Exterior)</option>
+                              <option>apresentou a rejeição 793 (Rejeição: Valor do ICMS relativo ao Fundo de Combate à Pobreza na UF de destino difere do calculado [nItem:999])</option>
+                              <option>apresentou a rejeição 794 (Rejeição: NF-e com indicativo de NFC-e com entrega a domicílio)</option>
+                              <option>apresentou a rejeição 795 (Rejeição: Total do ICMS desonerado difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 796 (Rejeição: Empresa sem Chave de Segurança para o QR-Code)</option>
+                              <option>apresentou a rejeição 798 (Rejeição: Valor total do ICMS relativo Fundo de Combate à Pobreza (FCP) da UF de destino difere do somatório do valor dos itens)</option>
+                              <option>apresentou a rejeição 799 ( Rejeição: Valor total do ICMS Interestadual da UF de destino difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 800 (Rejeição: Valor total do ICMS Interestadual da UF do remetente difere do somatório dos itens)</option>
+                              <option>apresentou a rejeição 805 (Rejeição: A SEFAZ do destinatário não permite Contribuinte Isento de Inscrição Estadual)</option>
+                              <option>apresentou a rejeição 806 (Rejeição: Operação com ICMS-ST sem informação do CEST)</option>
+                              <option>apresentou a rejeição 807 (Rejeição: NFC-e com grupo de ICMS para a UF do destinatário)</option>
+                              <option>apresentou a rejeição 999 (Rejeição: Erro não catalogado (informar a mensagem de erro capturado no tratamento da exceção))</option>
+
+
+			</select>
+			</div>
+		
+		<div class="form-group col-md-5">		
+		<label>Etapa:</label>
+			<select id="etapa" class="form-control">
+			   <option selected></option>
+                              <option>está na etapa (Em processamento; nenhuma ação manual necessária)</option>
+                              <option>está na etapa "C" (Concluído)</option>
+                              <option>está na etapa 1 (Estornar doc.&, lançar novo doc./reinicialz.doc.& e reenviar)</option>
+                              <option>está na etapa 2 (Estornar documento de origem)</option>
+                              <option>está na etapa 3 (Enviar documento às autoridades fiscais)</option>
+                              <option>está na etapa 4 (Solicitação para cancelamento rejeitada; verificar motivo)</option>
+                              <option>está na etapa 5 (Solicitação de inutilização rejeitada; verificar motivo.)</option>
+                              <option>está na etapa 6 (Inserir nº de log)</option>
+                              <option>está na etapa 7 (Sol.às autoridades autorização para estornar/ignorar doc.)</option>
+                              <option>está na etapa 8 (Erro validação interno no sistema mensagens. Enviar de novo.)</option>
+                              <option>está na etapa 9 (Determinar nº do documento e enviar a autoridades fiscais)</option>
+                              <option>está na etapa 0 (Def.nº doc.e enviar às autoridades fiscais por report batch)</option>
+                              <option>está na etapa A (Numeração efetuada no report batch - nenhuma ação necessária)</option>
+                              <option>está na etapa B (Envio efetuado via report batch - nenhuma ação necessária)</option>
+                              <option>está na etapa D (Erro validação no sist.mensagens; solicitar estorno novam.)</option>
+
+			</select>
+			</div>
+		</div>
+
+	<div class="form-row">	
+		<div class="form-group col-md-2">
+		<label>UF:</label>
+			<select id="uf" class="form-control">
+			   <option selected>UF...</option>
+                              <option>12 (AC)</option>
+                              <option>27 (AL)</option>
+                              <option>16 (AP)</option>
+                              <option>13 (AM)</option>
+                              <option>29 (BA)</option>
+                              <option>23 (CE)</option>
+                              <option>53 (DF)</option>
+                              <option>32 (ES)</option>
+                              <option>52 (GO)</option>
+                              <option>21 (MA)</option>
+                              <option>51 (MT)</option>
+                              <option>50 (MS)</option>
+                              <option>31 (MG)</option>
+                              <option>15 (PA)</option>
+                              <option>25 (PB)</option>
+                              <option>41 (PR)</option>
+                              <option>26 (PE)</option>
+                              <option>22 (PI)</option>
+                              <option>33 (RJ)</option>
+                              <option>24 (RN)</option>
+                              <option>43 (RS)</option>
+                              <option>11 (RO)</option>
+                              <option>14 (RR)</option>
+                              <option>42 (SC)</option>
+                              <option>35 (SP)</option>
+                              <option>28 (SE)</option>
+                              <option>17 (TO)</option>
+			</select>
+			</div></div>
+	<div class="form-row">		
+		<div class="form-group col-md-8">
+			<label>Mensagem do usuário:</label>
+				<textarea class="form-control" id="mensagem" style="margin-top: 0px; margin-bottom: 0px; height: 160px;"></textarea>
+		</div>
+
+
+	</div>
+	<button type="button" class="btn btn-success" onclick="pega()">Gerar</button>
+ 
+</form>
+</div>
+</body>
+</html>
