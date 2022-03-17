@@ -12,7 +12,17 @@
 <style>
 body {background-color: black; color: #f8f9fa; margin: 10px, right: 10px;
 	}
-
+h4 {
+color: blue;
+margin: 4px;
+}
+h5 {
+margin: 6px;
+}
+h6 {
+color: green;
+margin: 4px;
+}
 #transacao{
     text-transform: uppercase;
 }
@@ -32,6 +42,9 @@ text-decoration: none;
 #menu ul li a:hover {
 color: @004d00;
 }
+#imgmm{
+padding: 2px 2px;
+margin: 10px;
 </style>
 <script>
 <!-- ______________________________________________________Variáveis_____________________________________________________________ -->
@@ -116,7 +129,6 @@ btnCopy.addEventListener('click', (e) => {
 			<li><a href = "vivonext.html"> VIVO NEXT </a></li>
 			<li><a href = "vivocorp.html"> VIVO CORP </a></li>
 			<li><a href = "vivomoney.html"> VIVO MONEY </a></li>
-			<li><a href = "rejeicao234.html"> Rejeição 234 </a></li>
 			<li><a href = "pinpad.html"> PINPAD </a></li>
 			<li><a href = "mm.html"> MM </a></li>
 			<li><a href = "fi.html"> FI </a></li>
@@ -129,82 +141,28 @@ btnCopy.addEventListener('click', (e) => {
 <form name="formulario">
 		<div class="form-row">
 			<div class="form-group col-md-6">
-			<label>Qualquer chamado VIVONEXT Loja Física (RFC Reserva e RFC Pedido – ordem)</label>
-		</div>
-	 <div class="form-row">
-			<div class="form-group col-md-6">
-			<label>Texto padrão a ser envido na Nota do Chamado caso venha sem nenhuma informação:</label>
-			<select id="tipo" class="form-control">
-				<option selected>AMDOCS - Favor informar os campos abaixo para que possamos iniciar a análise.<br>
- 
-|ORDER_ID (pedido)
-|SALES_CHANNEL
-|RESERVATION_ID
-|DIST_CENTER
-|SALES_OFFICE
-|CANAL_DSITRIBUICAO
-|CRE_DATETIME
-|SERVICE_ID
-|VALUE
-|NOME
-|CPF
-|ENDERECO_CLIENTE
-|ENDERECO_ENTREGA
-|IMEI
-|DEV_SKU
-|ICCID
-|SIM_SKU
-|VALOR
-
-Caso seja uma Ordem do tipo Buyback/Renova, por favor nos passar os dados de voucher, marca, modelo, valor do desconto.
-</option>
-				</select>
+			<label>Ao verificar o chamado e indentificar que é de MM, enviar e-mail para toda a equipe de MM para que possam seguir com a análise.</label>
+							
 		</div>
 	 </div>
-		<div class="form-group col-md-6">
-			<label>Consultor</label>
-			<select id="temaassunto" class="form-control">
-				<option selected>Escolha o Consultor...</option>
-                                <option>Ana Kedia</option>
-								<option>Débora Cunha</option>				
-                                <option>Fabrícia Silvestre</option>
-                                <option>João Paulo</option>
-                                <option>Lennon Queiroz</option>
-                                <option>Rhian Mello</option>
-                                <option>Vinícius Cusini</option>
-            </select>
-		</div>                    
 		
-		<div class="form-group col-md-4">
-			<label>Assinatura:</label>
-			<select id="rejeicao1" class="form-control">
-				<option selected>Consultor SD</option>
-                               
-			</select>
-		</div>
-
-	</div>	
-	<button type="button" class="btn btn-success" onclick="pega()">Gerar</button>
 	
 </form>
 </div>
 
 </body>
 <div class="form-group col-md-4">
-	<label>Fila</label><br>
-	<img src="img/vivonext.png" alt="image" height="300"  width="1300">
+	<label>Exemplo do e-mail:</label><br>
+	<img src="img/mm.png" alt="image" height="400"  width="600">
 	 </div>
+	 <h4>E-mails da esquipe MM.<h4>
+<h6>damorim@minsait.com</h6>	 
+<h6>acgoncalves@minsait.com</h6>
+<h6>pdoss@minsait.com</h6>
+<h6>vpatricio@minsait.com</h6>
+
+	 </div><br>
+	 <h5> Em seguida enviar para fila de MM, com o anexo do e-mail enviado para eles.</h5>
+	 <img id= "imgmm" src="img/mm2.png" alt="image" height="250"  width="1200">
 	 
-<div class="form-group col-md-4">
-	<label>Ferramentas de análise:</label><br>
-	<label>Tabela ZSDT_LOG_RFC</label><br>
-	<label>Pedido exemplo: 3925318800</label>
-	<img src="img/vivonexttabela.png" alt="image" height="400"  width="600">
-	<label>Pedido exemplo: 3925318800</label>
-	<img src="img/vivonexttabela2.png" alt="image" height="250"  width="1200">
-	 </div>
-	 <div class="form-group col-md-4">
-	<label>Caso não consigamos analisar por falta/inconsistência de dados:</label><br>
-	<label>Informar via e-mail análise a Sustentação e colocar o chamado na fila dela, informando que precisamos do request/response (XML).</label><br>
-	 </div>
 </html>
