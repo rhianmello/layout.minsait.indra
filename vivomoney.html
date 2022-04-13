@@ -36,27 +36,10 @@ color: @004d00;
 <script>
 <!-- ______________________________________________________Variáveis_____________________________________________________________ -->
 function pega(){
-var1 =  "AMDOCS - Favor informar os campos abaixo para que possamos iniciar a análise." + "\n"
+var1 =  "Equipe VIVO MONEY," + "\n"
  
-+ "|ORDER_ID (pedido)" + "\n"
-+"|SALES_CHANNEL"  + "\n"
-+"|RESERVATION_ID"  + "\n"
-+"|DIST_CENTER"  + "\n"
-+"|SALES_OFFICE"  + "\n"
-+"|CANAL_DSITRIBUICAO" +  "\n"
-+"|CRE_DATETIME"  + "\n"
-+"|SERVICE_ID" +  "\n"
-+"|VALUE"  + "\n"
-+"|NOME " + "\n"
-+"|CPF  "+ "\n"
-+"|ENDERECO_CLIENTE"  + "\n"
-+"|ENDERECO_ENTREGA"  + "\n"
-+"|IMEI"  + "\n"
-+"|DEV_SKU"  + "\n"
-+"|ICCID"  + "\n"
-+"|SIM_SKU"  + "\n"
-+"|VALOR"  + "\n"
-+"Caso seja uma Ordem tipo Buyback/Renova, por favor nos passar os dados de voucher, marca, modelo, valor desconto." + "\n"+"\n"+"\n";	
++ "Diagnosticado que o impacto é devido ao projeto VIVOMONEY." + "\n"
++"Designado para a análise." + "\n"+"\n"+"\n";
 var2 = "" + document.formulario.temaassunto.value + "\n";
 var3 = "" + document.formulario.rejeicao1.value + "\n";
 
@@ -130,7 +113,49 @@ btnCopy.addEventListener('click', (e) => {
 <form name="formulario">
 		<div class="form-row">
 			<div class="form-group col-md-6">
-			<label>A fazer</label>
+			<label>Texto padrão a ser envido na Nota do Chamado :</label>
+			<select id="tipo" class="form-control">
+				<option selected>Equipe VIVO MONEY,
+
+Diagnosticado que o impacto é devido ao projeto VIVOMONEY.
+
+Designado para a análise.<br>
+</option>
+				</select>
+		
+		
+			<label>Consultor</label>
+			<select id="temaassunto" class="form-control">
+				<option selected>Escolha o Consultor...</option>
+                                <option>Ana Kedia</option>
+								<option>Débora Cunha</option>				
+                                <option>Fabrícia Silvestre</option>
+                                <option>João Paulo Rangel</option>
+                                <option>Lennon Queiroz</option>
+                                <option>Rhian Mello</option>
+                                <option>Vinícius Cusini</option>
+            </select>
+		
+			<label>Assinatura:</label>
+			<select id="rejeicao1" class="form-control">
+				<option selected>Consultor SAP SD</option>
+                               
+			</select>
+			<br>
+			<button type="button" class="btn btn-success" onclick="pega()" width:900 >Gerar</button>
+			
 		</div>
+
+	</div>	
+	
+	
+</form>
+</div>
+
+</body>
+<div class="form-group col-md-4">
+	<label>Fila</label><br>
+	<img src="https://user-images.githubusercontent.com/79878127/163211057-71242f40-49de-46c5-9645-528a66f2700d.png" alt="image" height="300"  width="1300">
+	 </div>
 	 
 </html>
