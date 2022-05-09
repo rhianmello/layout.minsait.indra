@@ -126,7 +126,7 @@ btnCopy.addEventListener('click', (e) => {
 			<li><a href = "vivonext.html"> VIVO NEXT </a></li>
 			<li><a href = "vivocorp.html"> VIVO CORP </a></li>
 			<li><a href = "vivomoney.html"> VIVO MONEY </a></li>
-			<li><a href = "pinpad.html"> PINPAD </a></li>
+			<li><a href = "Documento CS.html"> Documento CS </a></li>
 			<li><a href = "mm.html"> MM </a></li>
 			<li><a href = "fi.html"> FI </a></li>
 			<li><a href = "email.html"> E-mail para rejeições... </a></li>
@@ -137,7 +137,18 @@ btnCopy.addEventListener('click', (e) => {
 <HR size="5" color=#fff>
 
 
-<h6>A fazer</h6>	 
+	<h6>Revisão das regras para geração do documento CS - ATENÇÃO!</h6>
+	<h3>
 
+1 - Ser serializado e estar na tabela ZMMT101
+
+2 - Os valores de ICMS ST da operação e ICMS da substituição devem ser positivos.
+
+3 - Tipo de documento de faturamento deve estar dentro do set ZSD_CALC_ICMS (Transação GS03) ou CFOP deve estar dentro do set ZSD_CALC_ICMS_CFOP.
+
+4 - Deve ser somente para operações dentro do mesmo estado (UF).
+
+5 - Cadastro correto na tabela ZMMT022 do grupo de mercadorias, tipo de imposto e tipo de operação para determinação de contas contábeis.
+	</h3>
 	 
 </html>
