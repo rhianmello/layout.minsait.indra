@@ -42,7 +42,11 @@ color: @004d00;
 #imgmm{
 padding: 2px 2px;
 margin: 10px;
-</style>
+#doc.cs ol li {
+color: @004d00;
+padding: 2px 10px
+}
+	</style>
 <script>
 <!-- ______________________________________________________Variáveis_____________________________________________________________ -->
 function pega(){
@@ -137,18 +141,15 @@ btnCopy.addEventListener('click', (e) => {
 <HR size="5" color=#fff>
 
 
-	<h6>Revisão das regras para geração do documento CS - ATENÇÃO!</h6>
-	<h3>
-
-1 - Ser serializado e estar na tabela ZMMT101
-
-2 - Os valores de ICMS ST da operação e ICMS da substituição devem ser positivos.
-
-3 - Tipo de documento de faturamento deve estar dentro do set ZSD_CALC_ICMS (Transação GS03) ou CFOP deve estar dentro do set ZSD_CALC_ICMS_CFOP.
-
-4 - Deve ser somente para operações dentro do mesmo estado (UF).
-
-5 - Cadastro correto na tabela ZMMT022 do grupo de mercadorias, tipo de imposto e tipo de operação para determinação de contas contábeis.
-	</h3>
-	 
+	<h5>Revisão das regras para geração do documento CS - ATENÇÃO!</h5>
+	<h4><div id = "doc.cs">
+		<OL>
+			<li>Ser serializado e estar na tabela ZMMT101</li>
+			<li>Os valores de ICMS ST da operação e ICMS da substituição devem ser positivos.</li>
+			<li>Tipo de documento de faturamento deve estar dentro do set ZSD_CALC_ICMS (Transação GS03) ou CFOP deve estar dentro do set ZSD_CALC_ICMS_CFOP.</li>
+			<li>Deve ser somente para operações dentro do mesmo estado (UF).</a></li>
+			<li>Cadastro correto na tabela ZMMT022 do grupo de mercadorias, tipo de imposto e tipo de operação para determinação de contas contábeis.</li>
+		</OL>
+	</div></h4>
+ 
 </html>
