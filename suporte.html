@@ -13,8 +13,10 @@
 body {background-color: black; color: #f8f9fa; margin: 10px, right: 10px;
 	}
 
-h5 {
-margin: 6px;
+h8 {
+
+color: blue;
+
 }
 h6 {
 color: green;
@@ -138,42 +140,41 @@ btnCopy.addEventListener('click', (e) => {
 <center><h4>Sites de Suporte a Sustentação SAP SD</h4></center>
 <div class="container-fluid">
 <form name="formulario">
-		<div class="form-row">
-			<h6> Chamados para serem fechados diretamente no Remedy, sem e-mail</h6>
+<center><h6> Chamados para serem fechados diretamente no Remedy, sem e-mail</h6></center>
+		<div class="container">
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					
+					<li><h8>Posições de caixa em aberto (ZCAIXA)</h8></li>
+						<ul>Entrar em contato com sua Regional para verificar a área correta de acionamento. Abertura e fechamento de caixas são configurações realizadas diretamente em ambiente pela transação ZCAIXA002.
+						Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
+					
+					<li><h8>Terminal não cadastrado (ZCAIXA)</h8></li>
+						<ul>Entrar em contato com sua Regional para verificar a área correta de acionamento. Cadastro de terminais de caixa possuem configurações realizadas diretamente em ambiente pela transação ZCAIXA002.
+						Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
+					
+					<li><h8>IP não encontrado no arquivo Z\Ip.txt! (ZCAIXA)</h8></li>
+						<ul>Entrar em contato com sua Regional para verificar a área correta de acionamento. Cadastramento de IP por loja possuem configurações realizadas diretamente em ambiente pela transação ZCAIXA000.
+						Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
+				</div>
 				
-		<div class="form-group col-md-3">
-			<ol>
-			<li>Posições de caixa em aberto (ZCAIXA)</li>
-				<ul>Entrar em contato com sua Regional para verificar a área correta de acionamento. Abertura e fechamento de caixas são configurações realizadas diretamente em ambiente pela transação ZCAIXA002.
-				Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
-			
-			<li>Terminal não cadastrado (ZCAIXA)</li>
-				<ul>Entrar em contato com sua Regional para verificar a área correta de acionamento. Cadastro de terminais de caixa possuem configurações realizadas diretamente em ambiente pela transação ZCAIXA002.
-				Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
-			
-			<li>IP não encontrado no arquivo Z\Ip.txt! (ZCAIXA)</li>
-				<ul>Entrar em contato com sua Regional para verificar a área correta de acionamento. Cadastramento de IP por loja possuem configurações realizadas diretamente em ambiente pela transação ZCAIXA000.
-				Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
-			</ol>
-		</div>
-			
-		<div class="form-group col-md-3">
-			<ol>
-			<li>O Tipo de dispositivo X não suporta o formato de página ZCOUPOM (ZCAIXA)</li>
-				<ul>Entrar em contato com sua Regional para verificar a área correta de acionamento. Cadastramento de impressoras de cupom são realizadas diretamente em ambiente pela transação ZCAIXA002.
-				Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
+				<div class="form-group col-md-6">	
+					<li><h8><font size="2">O Tipo de dispositivo X não suporta o formato de página ZCOUPOM (ZCAIXA)</font></h8></li>
+						<ul>Entrar em contato com sua Regional para verificar a área correta de acionamento. Cadastramento de impressoras de cupom são realizadas diretamente em ambiente pela transação ZCAIXA002.
+						Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
 
-			<li>Falta de autorização para transação</li>
-				<ul>Entrar em contato com sua Regional/CSL para verificar a área correta de acionamento. Falta de perfil de acesso deve ser obtido pela transação SU53 imediatamente após ocorrer a falha de acesso.
-				Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
+					<li><h8>Falta de autorização para transaçã</h8></li>
+						<ul>Entrar em contato com sua Regional/CSL para verificar a área correta de acionamento. Falta de perfil de acesso deve ser obtido pela transação SU53 imediatamente após ocorrer a falha de acesso.
+						Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
 
-			<li>Rejeição por cadastro de CNPJ e/ou IE de cliente</li>
-				<ul>Favor verificar no SINTEGRA os dados do cliente (http://www.sintegra.gov.br/). Caso os dados estejam de acordo e mesmo assim a rejeição continue ocorrendo, o cliente deve entrar em contato com a SEFAZ para regularização da sua situação. 
-				Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
-			</ol>			
+					<li><h8>Rejeição por cadastro de CNPJ e/ou IE de cliente</h8></li>
+						<ul>Favor verificar no SINTEGRA os dados do cliente (http://www.sintegra.gov.br/). Caso os dados estejam de acordo e mesmo assim a rejeição continue ocorrendo, o cliente deve entrar em contato com a SEFAZ para regularização da sua situação. 
+						Somos uma área responsável apenas por falhas sistêmicas referente ao SAP.</ul><br>
+					</ol>			
+				</div>
+			</div>
 		</div>
-		
-	<div class="form-group col-md-6">
+	<div class="form-group col-md-10">
 			
 			<UL>
 			<li><a href = "https://www.indraweb.net/languages/pt-br/Paginas/default.aspx" target="_blank">INDRA</a></li>
